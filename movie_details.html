@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Details</title>
+    <style>
+        div#maincontent {
+            height: 300px;
+            width: 500px;
+            border: 1px solid #CEE2FA;
+            text-align: left;
+            color: #08438E;
+            font-family: calibri;
+            font-size: 20;
+            padding: 5px;
+        }
+        div#heading {
+            text-decoration: bold;
+            text-align: center;
+            margin-top: 80px;
+            width: 500px;
+            border: 1px solid #CEE2FA;
+            text-align: center;
+            color: #08438E;
+            background-color: #CEE2FA;
+            font-family: calibri;
+            font-size: 20;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div id="heading">Movie Details</div>
+        <div id="maincontent">
+            <div>
+           MOvie Name     :<input type="text" id="moviename">
+        </div>
+        <div>
+           Movie Language   :<input type="text" id="movielang">
+        </div>
+        <div>
+           Movie rating    :<input type="text" id="movierating">
+        </div>
+        <div>
+            <input type="submit" onClick="displaymovie()">
+          
+        </div>
+        <center>
+       <span id="res">
+
+       </span>
+    </center>
+        </div>
+    </center>
+    <script>
+        function displaymovie()
+        {
+        let movie_name;
+        let movie_language;
+        let movie_rating;
+    
+        movie_name=document.getElementById('moviename').value;
+        movie_language=document.getElementById('movielang').value;
+        movie_rating=document.getElementById('movierating').value;
+        document.getElementById('res').innerText=`movie name :${movie_name}\nmovie language:${movie_language}\nmovie rating :${movie_rating}`;
+        // document.getElementById('res').innerHTML=movie_language;
+        // document.getElementById('res').textContent=movie_rating;
+        // document.write(movie_name);
+        // document.writeln(movie_language);
+        // document.writeln(movie_rating);
+        }
+    </script>
+</body>
+
+</html>
