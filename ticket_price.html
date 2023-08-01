@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ticket Details</title>
+    <style>
+        div#maincontent {
+            height: 280px;
+            width: 500px;
+            border: 1px solid #CEE2FA;
+            text-align: left;
+            color: #08438E;
+            font-family: calibri;
+            font-size: 20;
+            padding: 5px;
+        }
+        div#heading {
+            text-decoration: bold;
+            text-align: center;
+            margin-top: 80px;
+            width: 500px;
+            border: 1px solid #CEE2FA;
+            text-align: center;
+            color: #08438E;
+            background-color: #CEE2FA;
+            font-family: calibri;
+            font-size: 20;
+            padding: 5px;
+        }
+        h4 {
+            padding: 0;
+            margin: 0;
+        }
+        input[type=text]
+        {
+            /* color:green; */
+            font-size:20px;
+            border:2px dashed;
+        }
+        input[type=text]:focus{
+            color:chartreuse;
+            border:3px groove;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div id="heading">
+            <b>Theatre Drama</b>
+        </div>
+        <div id="maincontent">
+            <h3>Enter no.of seats wanted to book :</h3>
+            <input type="text" id="seats_count">
+            <input type="submit" onclick="clac_price()">
+            <h4>Your Ticket Details:</h4>
+            <center>
+            <div id="display">
+                  
+            </div>
+            </center>
+            <br>
+            <script>
+                //Write the code to calculate the total price and discounted price for the tickets
+                function clac_price()
+                {
+                let cost,discount,final_cost;
+                var seats=document.getElementById("seats_count").value;
+                if(seats>0)
+                {
+                    cost=seats*9;
+                    let initialdisc=10;
+                    discount=0.1*cost;
+                    final_cost=cost-discount;
+                    data();
+                    function data()
+                        {
+                        //   event.preventDefault();
+                        document.getElementById("display").innerHTML ='';
+                          
+                          document.getElementById("display").innerHTML +=
+                        "<h3>Total No.of Seats Booked:   "+seats+"</h3>"
+                        +"<h3>Total cost of "+seats+" Tickets :   $"+cost+" </h3>"
+                        +"<h3>Festive Season Discount Is : "+initialdisc+"%</h3>"
+                        +"<h3>Total Cost After  Discount Is : $"+final_cost+"%</h3>";
+                        }
+                 
+
+                }
+                else if(seats==0)
+                {
+                    document.getElementById("display").innerHTML="<h3>jaffa ,please enter a number >0</h3>";
+                }
+              }
+            </script>
+        </div>
+    </center>
+</body>
+</html>
