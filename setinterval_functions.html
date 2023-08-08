@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>SET INTERVAL FUNCTION</title>
+    </head>
+    <body>
+        <input type="text" placeholder="your name please" id="name">
+        <input type="button" value="click Me" id="but" onClick="nonsense()">
+        <div class="dis">
+
+        </div>
+        <script>
+        
+        function nonsense()
+        {
+         
+        setInterval(datadis,1000);
+        
+        }
+     function datadis()
+     {
+        const animal=['kukka','nakka','chakka','pandhi','yeluka']
+            var name,i;
+        name=document.getElementById("name").value;
+        for(i=0;i<3;i++)
+         {
+            document.write(name+" is a "+animal[i]);
+            document.writeln("hal"+"<br>");
+            // document.write("hai");
+         }
+     }
+        </script>
+
+    </body>
+</html>
