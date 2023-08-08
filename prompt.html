@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>PROMPT BUILTIN FUNCTION</title>
+        <style>
+            #display{
+                color:blue;
+                font-size:30px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: aqua;
+                width:500px;
+                height:50px;
+                animation:anim linear 7s infinite;
+            }
+            @keyframes anim {
+                0%{
+                    background-color: aliceblue;
+                }
+                20%{
+                    background-color: chartreuse;
+                }
+                40%{
+                    background-color: rgb(216, 175, 182);
+                }
+                60%{
+                    background-color: rgb(236, 66, 19);
+                }
+                80%{
+                    background-color: rgb(193, 44, 156);
+                }
+                100%{
+                    background-color: rgb(104, 183, 235);
+                }
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div id="display">
+            
+        </div>
+        <script>
+            var num=window.prompt("Enter a number");
+            var sqnum=num*num;
+            document.getElementById("display").innerHTML="The square of number "+num+" is = "+sqnum;
+            
+        </script>
+    </body>
+</html>
