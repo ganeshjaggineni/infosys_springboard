@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>ALERT BUILTIN FUNCTION</title>
+        <style>
+            #display{
+                color:red;
+                font-size:25px;
+               
+            }
+            input[type="button"]{
+                color:green;
+                background-color: aqua;
+                font-size:35px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+    <div id="display">
+    <input type="button" id="dontclick" value="don't click" onClick="DontClick()">
+    </div>
+    <script>
+        function DontClick()
+        {
+        alert("musuku kurcho ra poolachokka");
+        document.getElementById("display").innerHTML="don't click antey endhuku click chesav.....neeku emi pani-paata ledha"
+        }
+    </script>
+</html>
