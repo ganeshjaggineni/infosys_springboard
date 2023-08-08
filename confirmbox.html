@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>ALERT BUILTIN FUNCTION</title>
+     <style>
+        #data{
+            /* background-color: blue; */
+            color:red;
+            font-size:40px;
+        }
+     </style>
+    </head>
+    <body>
+        <div id="data">
+            <p>hai</p>
+        </div>
+   <script>
+   var result=window.confirm("Are you a gay?");
+   if(result)
+   {
+    document.getElementById("data").innerHTML="I know,you are a gay";
+    // document.getElementById("data").innerHTML="mel";
+   }
+   if(!result)
+   {
+    document.getElementById("data").innerHTML="wrong answer";
+   }
+   </script>
+    </body>
+</html>
