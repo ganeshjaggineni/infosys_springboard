@@ -1,0 +1,17 @@
+const http = require("http");
+var lmodule = require("./mathfunctions.js");
+var server = http.createServer((req, res)=>{
+    result = lmodule.findBiggestNumber(220, 100);
+    res.writeHead(200,{"Content-Type":"text/html"});
+    let num1;
+    let num2;
+    res.write("<html><body><h1>The Biggest Number of Two Numbers is:"+result+"</h1>");
+    res.write("<font color='red'>Hello Node Mon.....</font>");
+    res.write("hai");
+    res.write("</body></html>");
+    res.end();
+    console.log("REquestreceived");
+
+});
+server.listen(3020);
+console.log("Server is running at port 3020");
